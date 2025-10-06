@@ -11,7 +11,7 @@ sample_endpoint_data = {
 # --- Test Case 1 (PASS): Check against the initial Golden Dataset ---
 def test_plan_meets_initial_quality_bar():
     plan = get_live_plan(sample_endpoint_data)
-
+    print (plan)
     has_happy_path = "valid" in plan or "existing" in plan
     has_unhappy_path = "invalid" in plan or "non-existent" in plan
 
