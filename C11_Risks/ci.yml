@@ -1,0 +1,68 @@
+# This is an example GitHub Actions workflow file demonstrating the
+# "Bifurcated Pipeline" strategy for managing the cost and speed of AI tests.
+
+name: AI Quality Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    # Run the full, expensive test suite every night at midnight UTC
+    - cron: '0 0 * * *'
+
+jobs:
+  # JOB 1: Fast Feedback for Developers
+  # This job runs on every single commit to a pull request.
+  # Its goal is to be as fast and cheap as possible.
+  fast_tests:
+    runs-on: ubuntu-latest
+    # This condition ensures the job only runs on pull requests
+    if: github.event_name == 'pull_request'
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt # Assuming a requirements file
+
+    - name: Run Fast, Cheap, Mocked Tests
+      run: |
+        # We use pytest markers to select only the fast tests.
+        # This would include all unit tests and mocked integration tests.
+        # It explicitly EXCLUDES any test that makes a real call to an AI model.
+        pytest -m "not slow"
+
+  # JOB 2: Deep-Dive Quality Analysis
+  # This job runs on a nightly schedule, not on every commit.
+  # Its goal is to provide a comprehensive quality report without blocking developers.
+  slow_tests:
+    runs-on: ubuntu-latest
+    # This condition ensures the job only runs on our nightly schedule
+    if: github.event_name == 'schedule'
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run Full Test Suite (including slow, expensive AI tests)
+      env:
+        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }} # Securely pass the API key
+      run: |
+        # We now run the *entire* test suite, including the "slow" tests
+        # that make real calls to the AI Judge and our agent.
+        # We could also use a specific marker: pytest -m "slow"
+        pytest
