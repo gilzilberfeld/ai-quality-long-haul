@@ -1,0 +1,7 @@
+v We start with a refined prompt. It introduces a bug.
+v Then, I want to show a (failing) test that catches this.
+Then we decide to change the prompt.
+v We show the integrated test that fails.
+v We show the original prompt.
+v Then the new prompt.
+ Then the test passes.
