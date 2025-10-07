@@ -1,11 +1,12 @@
 import json
-from Agent.agent import APITestPlanAgent
 from config import GEMINI_API_KEY
-
+import google.generativeai as genai
 
 class AIJudge:
     def __init__(self, api_key=GEMINI_API_KEY, model_name="gemini-1.5-pro-latest"):
-        self.judge_agent = APITestPlanAgent(api_key=api_key, model_name=model_name)
+        genai.configure(api_key=api_key)
+        self.model_name = model_name
+        self.model = genai.GenerativeModel(self.model_name)
 
     def validate_payload(self, payload_to_validate_str: str, json_schema: dict):
         judge_prompt = f"""
@@ -23,8 +24,7 @@ class AIJudge:
         {payload_to_validate_str}
         ```
         """
-
-        verdict_str = self.judge_agent.get_raw_completion(judge_prompt)
+        verdict_str = self.model.generate_content(judge_prompt).text
 
         try:
             verdict = json.loads(verdict_str)

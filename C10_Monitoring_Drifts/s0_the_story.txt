@@ -1,0 +1,8 @@
+Our tests are green, but we have a feeling the AI is getting... dumber. How do we catch a bug that doesn't cause a test to fail? We need to give our framework a memory.
+
+Introduce the concept of storing the quality scores from every test run in a simple database (a JSON file).
+
+v Show log of results.
+v Show test that produces the JSON file.
+Show test for immediate drop in quality.
+Show test that checks average score has been slowly trending downwards.

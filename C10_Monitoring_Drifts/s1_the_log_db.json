@@ -1,0 +1,58 @@
+[
+  {
+    "timestamp": "2025-11-10T10:00:00Z",
+    "commit_hash": "a1b2c3d",
+    "test_case_id": "GET /users/{id} - PII Check",
+    "quality_score": 12,
+    "max_score": 12
+  },
+  {
+    "timestamp": "2025-11-11T10:05:00Z",
+    "commit_hash": "e4f5g6h",
+    "test_case_id": "GET /users/{id} - PII Check",
+    "quality_score": 12,
+    "max_score": 12
+  },
+  {
+    "timestamp": "2025-11-12T09:55:00Z",
+    "commit_hash": "i7j8k9l",
+    "test_case_id": "GET /users/{id} - PII Check",
+    "quality_score": 12,
+    "max_score": 12
+  },
+  {
+    "timestamp": "2025-11-13T10:10:00Z",
+    "commit_hash": "m0n1o2p",
+    "test_case_id": "GET /users/{id} - PII Check",
+    "quality_score": 11,
+    "max_score": 12
+  },
+  {
+    "timestamp": "2025-11-14T10:02:00Z",
+    "commit_hash": "q3r4s5t",
+    "test_case_id": "GET /users/{id} - PII Check",
+    "quality_score": 11,
+    "max_score": 12
+  },
+  {
+    "timestamp": "2025-11-15T10:00:00Z",
+    "commit_hash": "u6v7w8x",
+    "test_case_id": "GET /users/{id} - PII Check",
+    "quality_score": 12,
+    "max_score": 12
+  },
+  {
+    "timestamp": "2025-11-16T09:58:00Z",
+    "commit_hash": "y9z0a1b",
+    "test_case_id": "GET /users/{id} - PII Check",
+    "quality_score": 10,
+    "max_score": 12
+  },
+  {
+    "timestamp": "2025-11-17T10:03:00Z",
+    "commit_hash": "c2d3e4f",
+    "test_case_id": "GET /users/{id} - PII Check",
+    "quality_score": 10,
+    "max_score": 12
+  }
+]
