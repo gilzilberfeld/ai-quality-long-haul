@@ -1,8 +1,18 @@
-Our tests are green, but we have a feeling the AI is getting... dumber. How do we catch a bug that doesn't cause a test to fail? We need to give our framework a memory.
+Okay. We've plugged the leaks in our "kayak." It's stronger.
+But everything we've done so far has been REACTIVE. We've been fixing bugs that already happened.
+A "Strategist" doesn't just plug leaks. A Strategist prepares for the problems they can't see yet.
+
+The rest of this webinar is about PROACTIVE quality systems. This is the core of the "Strategist" mindset. Let's build the three key systems our "Ship" needs to survive.
+
+It's when your tests are all GREEN... but your AI is slowly getting dumber.
+The model's personality changes, it gets chattier, or more formal, or refuses certain prompts. Your old tests pass, but the user experience is tanking.
+In addition, think about the threshold of our quality score. When we start our tests are passing because the quality score is a lot higher than the threshold. But they can continue to pass the bear minimum even if they continue to drift towards it. We'd like to know earlier.
+
+Your quality is drifting towards the rocks, and your alarms are silent.
 
 Introduce the concept of storing the quality scores from every test run in a simple database (a JSON file).
 
-v Show log of results.
-v Show test that produces the JSON file.
+Show log of results.
+Show test that produces the JSON file.
 Show test for immediate drop in quality.
 Show test that checks average score has been slowly trending downwards.

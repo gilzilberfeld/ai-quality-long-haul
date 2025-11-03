@@ -1,9 +1,0 @@
-Our ship is strong, but the ocean is full of pirates and hidden reefs. We need to prepare for the advanced, real-world risks that can sink even the most well-built vessel.
-
-The most sophisticated threat isn't that our AI feature is buggy; it's that adversaries are now using AI to attack our existing, non-AI systems. - Anthropics report
-
-https://www-cdn.anthropic.com/b2a76c6f6992465c09a6f2fce282f6c0cea8c200.pdf
-
-Show a test with malicious prompt injection.
-
-Then, show the biforcated pipeline as a foundation for pipeline design

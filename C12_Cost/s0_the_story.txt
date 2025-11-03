@@ -1,0 +1,17 @@
+Great. Our system is secure. Our sonar is on.
+
+...and we just got our first cloud bill. And we're in shock.
+
+Running our "AI Judge Battleship" on every single commit is costing a fortune.
+
+A "Strategist" must manage the economics of quality.
+
+We solve this with a "Bifurcated Pipeline" (a 2-lane highway).
+
+Lane 1 (The "Scout"): On every commit, we run our tests against a cheap, fast model (like Haiku or Gemini Flash). This catches 90% of the dumb bugs.
+
+Lane 2 (The "Battleship"): At night, we run the full test suite against our expensive, high-quality model (like Opus or Gemini Pro).
+
+(Show the ci.yml file as the demo).
+
+This gives us the best of both worlds: 90% confidence in 2 minutes, and 100% confidence every 24 hours. We are managing cost and quality.

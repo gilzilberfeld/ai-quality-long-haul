@@ -1,0 +1,25 @@
+Our ship is strong, but the ocean is full of pirates and hidden reefs. We need to prepare for the advanced, real-world risks that can sink even the most well-built vessel.
+
+The most sophisticated threat isn't that our AI feature is buggy; it's that adversaries are now using AI to attack our existing, non-AI systems. - Anthropics report
+
+https://www-cdn.anthropic.com/b2a76c6f6992465c09a6f2fce282f6c0cea8c200.pdf
+
+Show a test with malicious prompt injection.
+Our system needs a reinforced hull. We have to defend against bad-faith attacks, or "pirates."
+
+The most famous is Prompt Injection.
+
+The Story: You've heard of the guy who bought a car for $1 by tricking the AI chatbot? That's not a bug. That's a breach.
+
+(Show the "car story" or the "pirate joke" example).
+
+As quality leaders, this is now under our jurisdiction.
+
+You can't fix this with one "tactic." You need layers of defense.
+Layer 1 (The Prompt Fix): We can add a "system prompt" telling the AI to ignore user instructions. (This is brittle, but a start).
+
+Layer 2 (The Code Fix): We can add a code-based sanitizer that looks for keywords like "ignore instructions" BEFORE the prompt is ever sent.
+
+Layer 3 (The Process Fix): The real solution. We use a "Guardrail AI"—a separate, simple AI that does one job: check if the user's prompt looks like an attack.
+
+The user's prompt has to pass through multiple gates before it ever reaches our expensive, powerful AI.

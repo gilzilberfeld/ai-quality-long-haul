@@ -1,7 +1,15 @@
-v We start with a refined prompt. It introduces a bug.
-v Then, I want to show a (failing) test that catches this.
+We start with a refined prompt. It introduces a bug.
+Then, I want to show a (failing) test that catches this.
 Then we decide to change the prompt.
-v We show the integrated test that fails.
-v We show the original prompt.
-v Then the new prompt.
- Then the test passes.
+We show the integrated test that fails.
+We show the original prompt.
+Then the new prompt.
+Then the test passes.
+
+The "Test-First" Bug Fix (A Technical Principle)
+The Bug: Our agent is leaking PII in its examples! (Show the screenshot).
+The Tactic: A new dev might just tweak the prompt and pray.
+The Principle: As strategists, we make a rule: No fix is approved until a test is written that catches the bug.
+This is the Test-First loop. It's our best way to prove the fix works and ensure the bug never comes back.
+This isn't just a "best practice"; it's a critical process.
+We've not only fixed the leak, we've added a new, permanent regression test to our suite.

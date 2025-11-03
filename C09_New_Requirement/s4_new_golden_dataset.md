@@ -29,23 +29,31 @@ Golden Test Plan:
     * **Test Case 1: Authorization:** If authentication is required, verify that an unauthenticated request to this endpoint returns a 401 Unauthorized response.
 
 ---
-**Generated Payload:**
+**Generated Payload for Happy Path Cases:**
 ```json
 {
-  "title": "Cannot log in to dashboard",
-  "priority": "High"
+  "TestCase Data", [
+	"TestCase1": {
+	  "title": "Issue with dashboard login",
+	  "description": "Unable to login with correct credentials",
+	  "priority": "high"
+          },
+        "TestCase2": {
+          "title": "Feature request for CSV export",
+          "description": "New feaeture request credentials",
+          "priority": "low"
+  }]
 }
 ```
 --- End of Generated Payload ---
 
+---
+**Important**: <br>The response should not contain sensitive, non-public user data (e.g., password hash, email, home address) <br>
+The repsonse should include at payload input data for each test case, according to the requested examples.
 
 ---
+## Quality Scorecard:
 
-Quality Scorecard (Evolved):
-- Clarity (1-3): 3
-- Completeness (1-3): 3
-- Correctness (1-3): 3
-- Security & Privacy (1-3): 3
-- Test Data Generation (1-3): 1 - The baseline agent does not generate this payload, so it fails to meet the new, higher standard.
-
-Total Score: 13/15
+| Endpoint       | AI Output<br>(Summary)                                                                               | Explanation<br>Quality<br>(1-3) | Test Case<br>Relevance <br>(1-3) | Functional<br>Coverage<br>(1-3) | Examples created (1-3) |Risk & Security Coverage<br>(1-3) | Total Score |
+|-----------------|------------------------------------------------------------------------------------------------------|------------------------------|------------------------------|---------------------------------|------------------------|----------------------------------------------------------|-------------|
+| GET /users/{id} | **Explanation**: Correct.<br>**Happy Path**: Mid.<br>**Unhappy Path**: Good.<br>**Edge Cases**: Mid.<br>**Security Cases**: Incorrect  | 3                            | 3                            | 2 | 3                      | 3                      | 14/15       |

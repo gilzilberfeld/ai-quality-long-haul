@@ -10,6 +10,7 @@ This document serves as the source of truth for the quality of our AI-powered AP
 # Golden Test Plan:
 
 ## API Endpoint Test Plan: GET /users/{id}
+# API Endpoint Test Plan: GET /users/{id}
 
 ```
 1.  **API Explanation:**
@@ -26,10 +27,16 @@ This document serves as the source of truth for the quality of our AI-powered AP
 4.  **Edge Cases:**
     * **Test Case 1: Very Large User ID:** Verify that the system handles a request with a user ID at the maximum integer limit without errors.
 
+5.  **Security & Privacy:**
+    * **Test Case 1: PII Masking:** Verify that when the endpoint returns user data, any sensitive PII fields like `credit_card_number` are appropriately masked (e.g., showing only the last 4 digits, `************4444`) and not returned in plaintext.
 ```
-## Quality Scorecard:
-- Clarity (1-3): 3 - The plan is easy to understand and well-structured.
-- Completeness (1-3): 3 - It covers the essential happy, unhappy, and edge cases.
-- Correctness (1-3): 3 - All technical details and expected status codes are correct.
+---
+**Important**: The response should not contain sensitive, non-public user data (e.g., password hash, email, home address)    
 
-**Total Score**: 9/9
+---
+
+## Quality Scorecard:
+
+| Endpoint       | AI Output<br>(Summary)                                                                               | Explanation<br>Quality<br>(1-3) | Test Case<br>Relevance <br>(1-3) | Functional<br>Coverage<br>(1-3) | Risk & Security Coverage<br>(1-3) | Total Score |
+|-----------------|------------------------------------------------------------------------------------------------------|------------------------------|------------------------------|---------------------------------|-----------------------------------|-------------|
+| GET /users/{id} | **Explanation**: Correct.<br>**Happy Path**: Mid.<br>**Unhappy Path**: Good.<br>**Edge Cases**: Mid.<br>**Security Cases**: Incorrect  | 3                            | 3                            | 2                               | 3                                 | 11/12       |

@@ -1,7 +1,11 @@
+The New Requirement: PM wants our agent to generate a valid JSON payload for every test case.
+The Problem: How do you test this? The JSON is fuzzy, non-deterministic. A simple string assert won't work.
+The Principle: We handle "fuzziness" with layers of testing.
+
 The Product Manager now wants the agent to be smarter. For every 'Happy Path' test case it generates, it must also generate a valid, ready-to-use JSON payload that could be used as the request body for that test.
 
 
-v Present the requirement.
+Present the requirement.
     The Product Manager now wants the agent to be smarter. For every 'Happy Path' test case it generates, it must also generate a valid, ready-to-use JSON payload that could be used as the request body for that test.
 
     POST /tickets
@@ -14,9 +18,9 @@ v Present the requirement.
 Present the complexity.
      How do we write a pytest case to check if the generated JSON is correct?
      We could write a complex parser and a series of brittle assert statements, but this is exactly the kind of "fuzzy" problem where traditional testing struggles. The generated data might be syntactically valid JSON but semantically wrong (e.g., a quantity of 0 when the minimum is 1).
-v Present the design (part logic fix, part prompt).
-v Write validation unit tests, with a couple of examples for JSON we got (one valid, one invalid).
-v The tests will call a new method in the agent, that validates the JSON. It is also called from the main API. We now know that validation works up to some point (we need to define what they are).
-v Next update the golden dataset.
-v Next add integrated test, that follows the new golden dataset.
-v Then we can add an AI judge example.
+Present the design (part logic fix, part prompt).
+Write validation unit tests, with a couple of examples for JSON we got (one valid, one invalid).
+The tests will call a new method in the agent, that validates the JSON. It is also called from the main API. We now know that validation works up to some point (we need to define what they are).
+Next update the golden dataset.
+Next add integrated test, that follows the new golden dataset.
+Then we can add an AI judge example.

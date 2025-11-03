@@ -30,12 +30,11 @@ Golden Test Plan (Baseline):
     * **Test Case 1: Authorization:** If authentication is required, verify that an unauthenticated request to this endpoint returns a 401 Unauthorized response.
 
 ---
+**Important**:
+The response should not contain sensitive, non-public user data (e.g., password hash, email, home address)
 
-Quality Scorecard:
+## Quality Scorecard:
 
-- Clarity (1-3): 3 - The plan is well-structured and easy to understand.
-- Completeness (1-3): 3 - It covers the essential happy, unhappy, and edge cases for this endpoint.
-- Correctness (1-3): 3 - All technical details and expected status codes are correct.
-- Security & Privacy (1-3): 3 - It correctly identifies the need for an authorization test.
-
-Total Score: 12/12
+| Endpoint       | AI Output<br>(Summary)                                                                               | Explanation<br>Quality<br>(1-3) | Test Case<br>Relevance <br>(1-3) | Functional<br>Coverage<br>(1-3) | Risk & Security Coverage<br>(1-3) | Total Score |
+|-----------------|------------------------------------------------------------------------------------------------------|------------------------------|------------------------------|---------------------------------|-----------------------------------|-------------|
+| GET /users/{id} | **Explanation**: Correct.<br>**Happy Path**: Mid.<br>**Unhappy Path**: Good.<br>**Edge Cases**: Mid.<br>**Security Cases**: Incorrect | 3                            | 3                            | 2                               | 3                                 | 11/12       |

@@ -10,7 +10,6 @@ This document serves as the source of truth for the quality of our AI-powered AP
 # Golden Test Plan:
 
 ## API Endpoint Test Plan: GET /users/{id}
-# API Endpoint Test Plan: GET /users/{id}
 
 ```
 1.  **API Explanation:**
@@ -25,16 +24,14 @@ This document serves as the source of truth for the quality of our AI-powered AP
     * **Test Case 2: Invalid user ID format:** Verify that providing a non-integer user ID (e.g., "abc") returns a 400 Bad Request response.
 
 4.  **Edge Cases:**
-    * **Test Case 1: Very Large User ID:** Verify that the system handles a request with a user ID at the maximum integer limit without errors.
+    * **Test Case 1: Very small User ID:** Request a user with the lowest possible valid ID (e.g., 1).
 
-5.  **Security & Privacy:**
-    * **Test Case 1: PII Masking:** Verify that when the endpoint returns user data, any sensitive PII fields like `credit_card_number` are appropriately masked (e.g., showing only the last 4 digits, `************4444`) and not returned in plaintext.
 ```
 
-## Quality Scorecard (Evolved):
-- Clarity (1-3): 3 - The plan is clear and follows the required structure.
-- Completeness (1-3): 1 - The agent's original output is now considered incomplete because it's missing the critical Security & Privacy section.
-- Correctness (1-3): 3 - The sections that are present are still technically correct.
-- Security & Privacy (1-3): 1 - The agent's output completely fails to address the new PII requirement.
 
-**Total Score**: 8/12
+
+Quality Score
+
+|  Endpoint	      | AI Output<br>(Summary)                                                                                   | 	Explanation<br>Quality (1-3) | 	Test Case<br>Relevance (1-3) | 	Functional<br>Coverage (1-3) | 	Total Score |
+|-----------------|----------------------------------------------------------------------------------------------------------|---------------------------|-------------------------------|-------------------------------|--------------|
+| GET /users/{id} | 	**Explanation**: Correct. <br>**Happy Path**: Good.<br>**Unhappy Path**: Good.<br>**Edge Cases**: Mid.	 | 3                              | 	3                            | 	2                            | 	8/9         | 

@@ -1,0 +1,11 @@
+Case 2: We've missed the whole security aspects of a what a good plan is.
+The Bug: We missed a whole class of bugs. Our first Golden Dataset didn't even check for security!
+The Problem: Our "Golden Dataset" is not a "set it and forget it" artifact. It must be a living document.
+The Principle: Our process must evolve. When we find a new bug class, our "Definition of Good" (our Scorecard) must be upgraded.
+
+Show the report again, show the missing section.
+Review the current dataset.
+Update the dataset.
+Add an integrated failing test that checks the section should be there.
+Show the updated prompt.
+Show the dataset with new scoring.
