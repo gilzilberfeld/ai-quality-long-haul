@@ -54,6 +54,6 @@ The repsonse should include at payload input data for each test case, according 
 ---
 ## Quality Scorecard:
 
-| Endpoint       | AI Output<br>(Summary)                                                                               | Explanation<br>Quality<br>(1-3) | Test Case<br>Relevance <br>(1-3) | Functional<br>Coverage<br>(1-3) | Examples created (1-3) |Risk & Security Coverage<br>(1-3) | Total Score |
-|-----------------|------------------------------------------------------------------------------------------------------|------------------------------|------------------------------|---------------------------------|------------------------|----------------------------------------------------------|-------------|
-| GET /users/{id} | **Explanation**: Correct.<br>**Happy Path**: Mid.<br>**Unhappy Path**: Good.<br>**Edge Cases**: Mid.<br>**Security Cases**: Incorrect  | 3                            | 3                            | 2 | 3                      | 3                      | 14/15       |
+| Endpoint      | AI Output<br>(Summary)                                                                               | Explanation<br>Quality<br>(1-3) | Test Case<br>Relevance <br>(1-3) | Functional<br>Coverage<br>(1-3) | Examples created (1-3) |Risk & Security Coverage<br>(1-3) | Total Score |
+|---------------|------------------------------------------------------------------------------------------------------|------------------------------|------------------------------|---------------------------------|------------------------|----------------------------------------------------------|-------------|
+| POST /tickets | **Explanation**: Correct.<br>**Happy Path**: Mid.<br>**Unhappy Path**: Good.<br>**Edge Cases**: Mid.<br>**Security Cases**: Incorrect  | 3                            | 3                            | 2 | 3                      | 3                      | 14/15       |

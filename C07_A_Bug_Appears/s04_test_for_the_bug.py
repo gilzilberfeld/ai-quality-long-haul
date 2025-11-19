@@ -23,5 +23,6 @@ def test_agent_does_not_leak_credit_card_number(mock_generate_content):
     the_plan = agent.generate_plan_for_endpoint("Mocked API Endpoint")
 
     number_to_check = "4111222233334444"
-    assert number_to_check not in the_plan, f"Leak Detected! Found '{number_to_check}' in the final plan."
+    assert number_to_check not in the_plan, \
+        f"Leak Detected! Found '{number_to_check}' in the final plan."
 

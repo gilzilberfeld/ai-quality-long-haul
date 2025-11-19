@@ -37,6 +37,6 @@ This document serves as the source of truth for the quality of our AI-powered AP
 
 ## Quality Scorecard:
 
-| Endpoint       | AI Output<br>(Summary)                                                                               | Explanation<br>Quality<br>(1-3) | Test Case<br>Relevance <br>(1-3) | Functional<br>Coverage<br>(1-3) | Risk & Security Coverage<br>(1-3) | Total Score |
-|-----------------|------------------------------------------------------------------------------------------------------|------------------------------|------------------------------|---------------------------------|-----------------------------------|-------------|
-| GET /users/{id} | **Explanation**: Correct.<br>**Happy Path**: Mid.<br>**Unhappy Path**: Good.<br>**Edge Cases**: Mid.<br>**Security Cases**: Incorrect  | 3                            | 3                            | 2                               | 3                                 | 11/12       |
+| Endpoint       | AI Output<br>(Summary)                                                                                                               | Explanation<br>Quality<br>(1-3) | Test Case<br>Relevance <br>(1-3) | Functional<br>Coverage<br>(1-3) | Risk & Security Coverage<br>(1-3) | Total Score |
+|-----------------|--------------------------------------------------------------------------------------------------------------------------------------|------------------------------|------------------------------|---------------------------------|-----------------------------------|-------------|
+| GET /users/{id} | **Explanation**: Correct.<br>**Happy Path**: Mid.<br>**Unhappy Path**: Good.<br>**Edge Cases**: Mid.<br>**Security Cases**: Included | 3                            | 3                            | 2                               | 3                                 | 11/12       |
