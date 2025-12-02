@@ -49,11 +49,11 @@ Golden Test Plan:
 
 ---
 **Important**: <br>The response should not contain sensitive, non-public user data (e.g., password hash, email, home address) <br>
-The repsonse should include at payload input data for each test case, according to the requested examples.
+The repsonse should include a payload input data for each test case, according to the requested examples.
 
 ---
 ## Quality Scorecard:
 
-| Endpoint      | AI Output<br>(Summary)                                                                               | Explanation<br>Quality<br>(1-3) | Test Case<br>Relevance <br>(1-3) | Functional<br>Coverage<br>(1-3) | Examples created (1-3) |Risk & Security Coverage<br>(1-3) | Total Score |
-|---------------|------------------------------------------------------------------------------------------------------|------------------------------|------------------------------|---------------------------------|------------------------|----------------------------------------------------------|-------------|
-| POST /tickets | **Explanation**: Correct.<br>**Happy Path**: Mid.<br>**Unhappy Path**: Good.<br>**Edge Cases**: Mid.<br>**Security Cases**: Incorrect  | 3                            | 3                            | 2 | 3                      | 3                      | 14/15       |
+| Endpoint      | AI Output<br>(Summary)                                                                                                           | Explanation<br>Quality<br>(1-3) | Test Case<br>Relevance <br>(1-3) | Functional<br>Coverage<br>(1-3) | Examples created (1-3) |Risk & Security Coverage<br>(1-3) | Total Score |
+|---------------|----------------------------------------------------------------------------------------------------------------------------------|------------------------------|------------------------------|---------------------------------|------------------------|----------------------------------------------------------|-------------|
+| POST /tickets | **Explanation**: Correct.<br>**Happy Path**: Mid.<br>**Unhappy Path**: Good.<br>**Edge Cases**: Mid.<br>**Security Cases**: Good | 3                            | 3                            | 2 | 3                      | 3                      | 14/15       |

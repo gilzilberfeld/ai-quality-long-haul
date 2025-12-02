@@ -16,7 +16,7 @@ jobs:
   # JOB 1: Fast Feedback for Developers
   # This job runs on every single commit to a pull request.
   # Its goal is to be as fast and cheap as possible.
-  fast_tests:
+  cheap_tests:
     runs-on: ubuntu-latest
     # This condition ensures the job only runs on pull requests
     if: github.event_name == 'pull_request'
@@ -32,17 +32,17 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt # Assuming a requirements file
 
-    - name: Run Fast, Cheap, Mocked Tests
+    - name: Run Developer and Cheap Tests
       run: |
-        # We use pytest markers to select only the fast tests.
+        # We use pytest markers to select only the 1st lane tests.
         # This would include all unit tests and mocked integration tests.
-        # It explicitly EXCLUDES any test that makes a real call to an AI model.
-        pytest -m "not slow"
+        # It may also run a subset of tests to call to a less powerful AI model.
+        pytest -m "lane 1"
 
   # JOB 2: Deep-Dive Quality Analysis
   # This job runs on a nightly schedule, not on every commit.
   # Its goal is to provide a comprehensive quality report without blocking developers.
-  slow_tests:
+  complex_tests:
     runs-on: ubuntu-latest
     # This condition ensures the job only runs on our nightly schedule
     if: github.event_name == 'schedule'
@@ -58,7 +58,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Run Full Test Suite (including slow, expensive AI tests)
+    - name: Run Expensive Test Suite
       env:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }} # Securely pass the API key
       run: |
